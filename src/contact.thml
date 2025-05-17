@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleep Outside | Contact Us</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/contact.js" defer></script>
+  </head>
+
+  <body>
+    <header class="divider">
+      <div class="logo">
+        <img src="/images/noun_Tent_2517.svg" alt="tent image for logo" />
+        <a href="/index.html">Sleep<span class="highlight">Outside</span></a>
+      </div>
+
+      <div class="cart">
+        <a href="/cart/index.html">🛒</a>
+      </div>
+    </header>
+
+    <main class="divider">
+      <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div id="formMessage" style="margin-top: 1rem;"></div>
+      </section>
+    </main>
+
+    <footer>&copy; NOT a real business</footer>
+  </body>
+</html>
