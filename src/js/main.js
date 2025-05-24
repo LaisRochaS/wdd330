@@ -16,3 +16,19 @@ document.getElementById("contactForm").addEventListener("submit", function (even
   formMessage.textContent = "Thanks for contacting us! We'll get back to you soon.";
   this.reset();
 });
+
+window.addEventListener('scroll', () => {
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (window.scrollY > 300) {
+    scrollTopBtn.style.display = 'block';
+  } else {
+    scrollTopBtn.style.display = 'none';
+  }
+});
+
+document.getElementById('scrollTopBtn').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

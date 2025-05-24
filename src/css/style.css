@@ -19,6 +19,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007b9e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #005f75;
+}
+
 
 body {
   font-family: var(--font-body);
