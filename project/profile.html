@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile – Virtual Book Club</title>
+ <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/firebase-config.js"></script>
+  <script src="scripts/app.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>📚 My Profile</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="club.html">Book Clubs</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <main class="profile-container">
+    <section class="user-info">
+      <h2>User Information</h2>
+      <p><strong>Name:</strong> <span id="userName">Loading...</span></p>
+      <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+    </section>
+
+    <section class="reading-lists">
+      <h2>My Reading Lists</h2>
+
+      <div class="reading-list" id="wantToRead">
+        <h3>📖 Want to Read</h3>
+        <ul></ul>
+      </div>
+
+      <div class="reading-list" id="currentlyReading">
+        <h3>📘 Currently Reading</h3>
+        <ul></ul>
+      </div>
+
+      <div class="reading-list" id="finishedReading">
+        <h3>📗 Finished Reading</h3>
+        <ul></ul>
+      </div>
+    </section>
+
+    <section class="user-reviews">
+      <h2>My Reviews</h2>
+      <div id="userReviews">
+        <!-- User reviews will appear here -->
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/firebase-config.js" type="module"></script>
+  <script src="scripts/profile.js" type="module"></script>
+</body>
+</html>

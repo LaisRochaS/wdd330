@@ -1,0 +1,78 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FAFAFA;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-family: 'Lora', serif;
+  color: #060f2f;
+}
+
+header {
+  background-color: #3F51B5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  width: 60%;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #FF7043;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+nav a {
+  background-color: #3F51B5;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.book-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+.profile-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.user-info, .reading-lists, .user-reviews {
+  background: white;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.reading-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.reading-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.review-item {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
