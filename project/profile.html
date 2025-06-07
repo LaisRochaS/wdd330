@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Lais Watson">
   <title>My Profile – Virtual Book Club</title>
- <link rel="stylesheet" href="styles/styles.css" />
+  <meta name="description" content="View and manage your profile, reading lists, and reviews in the Virtual Book Club.">
+  <link rel="stylesheet" href="styles/styles.css" />
   <script src="scripts/firebase-config.js"></script>
   <script src="scripts/app.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -15,6 +19,8 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="club.html">Book Clubs</a>
+      <a href="profile.html">My Profile</a>
+     <a href="search.html">Search Books</a>
       <a href="#" onclick="logout()">Logout</a>
     </nav>
   </header>
@@ -55,5 +61,12 @@
 
   <script src="scripts/firebase-config.js" type="module"></script>
   <script src="scripts/profile.js" type="module"></script>
+    <footer>
+        <p>&copy; <span id="year"></span> | Lais Watson | WDD 330 | <span id="lastModified"></span></p>
+        <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+        </script>
+    </footer>
 </body>
 </html>

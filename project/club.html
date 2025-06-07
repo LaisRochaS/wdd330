@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Lais Watson">
+  <meta name="keywords" content="Virtual Book Club, book search, book clubs, reading community, online book club">
+  <title>Virtual Book Club - Club Room</title>
+  <meta name="description" content="Search for and join book clubs, connect with fellow readers in our virtual book club community.">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/firebase-config.js" type="module"></script>
+  <script src="scripts/club.js" type="module"></script>   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>📘 Book Club Room</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="club.html">Book Clubs</a>
+      <a href="profile.html">My Profile</a>
+      <a href="search.html">Search Books</a>
+      </nav>
+  </header>
+
+  <main class="club-page">
+    <section class="club-info">
+      <h2 id="clubName">Loading club...</h2>
+      <p id="clubDescription"></p>
+
+      <div class="current-book">
+        <h3>📖 Currently Reading</h3>
+        <div id="currentBook">
+          <!-- Book info will be loaded here -->
+        </div>
+      </div>
+
+      <div class="club-members">
+        <h3>👥 Members</h3>
+        <ul id="memberList"></ul>
+      </div>
+    </section>
+
+    <section class="club-chat">
+      <h2>💬 Discussion</h2>
+      <div id="chatWindow" class="chat-window"></div>
+      <input type="text" id="chatInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </section>
+  </main>
+
+  <script src="scripts/firebase-config.js" type="module"></script>
+  <script src="scripts/club.js" type="module"></script>
+  <footer>
+  <p>&copy; <span id="year"></span> | Lais Watson | WDD 330 | <span id="lastModified"></span></p>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+  </footer>
+</body>
+</html>

@@ -76,3 +76,97 @@ nav a {
   padding-top: 1rem;
   margin-top: 1rem;
 }
+footer {
+  background-color: #3F51B5;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.featured-books {
+  padding: 2rem;
+  text-align: center;
+}
+
+.book-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.book-gallery img {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-clubs {
+  padding: 2rem;
+  background-color: #F0F0F0;
+  border-top: 2px solid #ccc;
+}
+
+.about-clubs h2 {
+  color: #3F51B5;
+}
+
+.about-clubs ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+.about-clubs li::before {
+  content: "✔️ ";
+}
+.about-clubs li {
+  margin-bottom: 0.5rem;
+}
+.club-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.club-info {
+  flex: 1 1 40%;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.club-chat {
+  flex: 1 1 55%;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.chat-window {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #fafafa;
+}
+
+input[type="text"]#chatInput {
+  width: 80%;
+  padding: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #FF7043;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

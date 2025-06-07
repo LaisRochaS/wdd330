@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Lais Watson">
+  <meta name="keywords" content="Virtual Book Club, book search, book clubs, reading community, online book club">
   <title>Virtual Book Club</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <script src="scripts/firebase-config.js"></script>
-  <script src="scripts/app.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="description" content="Search for books, join book clubs, and connect with fellow readers in our virtual book club community." />
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -16,20 +19,66 @@
       <a href="index.html">Home</a>
       <a href="club.html">Book Clubs</a>
       <a href="profile.html">My Profile</a>
-      </nav>
-    <input type="text" id="searchInput" placeholder="Search for books..." />
-    <button onclick="searchBooks()">Search</button>
+     <a href="search.html">Search Books</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
   </header>
-  
+
   <main>
-    <section id="bookResults"></section>
+    <section class="intro">
+      <h2>Connect. Discover. Discuss.</h2>
+      <p>Join virtual book clubs, explore new reads, and chat in real-time with fellow readers.</p>
+    </section>
+
+    <section class="featured-books">
+      <h2>📚 Featured Reads</h2>
+      <div class="book-gallery">
+        <img src="https://covers.openlibrary.org/b/id/9873876-L.jpg" alt="To Kill a Mockingbird" />
+        <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" alt="1984 by George Orwell" />
+        <img src="https://covers.openlibrary.org/b/id/10568909-L.jpg" alt="Pride and Prejudice" />
+        <img src="https://covers.openlibrary.org/b/id/10958325-L.jpg" alt="The Great Gatsby" />
+      </div>
+    </section>
+
+    <section class="about-clubs">
+      <h2>Why Join a Book Club?</h2>
+      <p>Book clubs are more than just reading groups — they're vibrant communities that foster discussion, critical thinking, and a shared love of literature.</p>
+      <ul>
+        <li>📖 Discover books you'd never choose on your own.</li>
+        <li>🗣️ Engage in meaningful discussions with diverse perspectives.</li>
+        <li>🤝 Make new friends through shared literary journeys.</li>
+        <li>🎯 Stay motivated and accountable to finish books.</li>
+        <li>🌐 Enjoy a flexible, social reading experience — anytime, anywhere.</li>
+      </ul>
+    </section>
+
+    <section class="search-section">
+      <h2>🔍 Search for Books</h2>
+      <input type="text" id="searchInput" placeholder="Enter book title, author, or keyword..." />
+      <button onclick="searchBooks()">Search</button>
+    </section>
+
+    <section id="bookResults">
+      
+    </section>
+
+   
     <section id="recentClubs">
-      <h2>Recent Book Clubs</h2>
-      <!-- List of clubs will load here -->
+      <h2>📘 Recent Book Clubs</h2>
+      <div id="clubList">
+       
+      </div>
     </section>
   </main>
 
   <script src="scripts/firebase-config.js" type="module"></script>
   <script src="scripts/app.js" type="module"></script>
+   <footer>
+  <p>&copy; <span id="year"></span> | Lais Watson | WDD 330 | <span id="lastModified"></span></p>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+  </footer>
 </body>
 </html>
